@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace Foundation.ScribanExtensions.Cache
 {
     public class ScribanRenderCache : IScribanRenderCache
     {
-        private Stack<string> _endFieldStack;
+        private ConcurrentStack<string> _endFieldStack;
 
         protected virtual Stack<string> EndFieldStack => _endFieldStack ?? (_endFieldStack = new Stack<string>());
 

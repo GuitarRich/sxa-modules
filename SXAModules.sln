@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{410439F3-0568-4880-897B-58633AB0A4AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{EAED300D-573F-41CB-B15D-3E88286CF1FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{34EB9B1C-88DC-4EC4-B05F-61FD7D97E9EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{E6F4A170-6521-4EF5-A74B-1BD2B448CD55}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		nuget.config = nuget.config
+		README.md = README.md
+		build\Solution.config = build\Solution.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "props", "props", "{C5625CE4-8DDA-4F77-817F-41198A83DD55}"
+	ProjectSection(SolutionItems) = preProject
+		build\props\Website.BuildProperties.props = build\props\Website.BuildProperties.props
+		build\props\Website.PackageReferences.props = build\props\Website.PackageReferences.props
+		build\props\Website.ProjectContent.props = build\props\Website.ProjectContent.props
+		build\props\Website.Publishing.props = build\props\Website.Publishing.props
+		build\props\Website.References.props = build\props\Website.References.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "targets", "targets", "{7A948BD0-322D-454B-9013-F82B8EFD25E5}"
+	ProjectSection(SolutionItems) = preProject
+		build\targets\Website.AutoPublish.targets = build\targets\Website.AutoPublish.targets
+		build\targets\Website.DoNotPublishAssembly.props = build\targets\Website.DoNotPublishAssembly.props
+		build\targets\Website.PublishSingleItem.targets = build\targets\Website.PublishSingleItem.targets
+		build\targets\Website.RemoveDoNotPublishAssembly.targets = build\targets\Website.RemoveDoNotPublishAssembly.targets
+		build\targets\Website.TransformXml.targets = build\targets\Website.TransformXml.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScribanExtensions", "ScribanExtensions", "{D1FBDD58-0A5D-4AD9-ACA6-632292192FE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foundation.ScribanExtensions", "src\Foundation\ScribanExtensions\code\Foundation.ScribanExtensions.csproj", "{20156705-7918-42E3-9CAC-01351034D05D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20156705-7918-42E3-9CAC-01351034D05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20156705-7918-42E3-9CAC-01351034D05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20156705-7918-42E3-9CAC-01351034D05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20156705-7918-42E3-9CAC-01351034D05D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5625CE4-8DDA-4F77-817F-41198A83DD55} = {E6F4A170-6521-4EF5-A74B-1BD2B448CD55}
+		{7A948BD0-322D-454B-9013-F82B8EFD25E5} = {E6F4A170-6521-4EF5-A74B-1BD2B448CD55}
+		{D1FBDD58-0A5D-4AD9-ACA6-632292192FE8} = {EAED300D-573F-41CB-B15D-3E88286CF1FF}
+		{20156705-7918-42E3-9CAC-01351034D05D} = {D1FBDD58-0A5D-4AD9-ACA6-632292192FE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFF01023-D16C-48C9-96C2-EB5415BBB6C6}
+	EndGlobalSection
+EndGlobal

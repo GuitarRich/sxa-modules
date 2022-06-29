@@ -1,5 +1,4 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 namespace Foundation.ScribanExtensions.Cache
 {
@@ -7,7 +6,7 @@ namespace Foundation.ScribanExtensions.Cache
     {
         private ConcurrentStack<string> _endFieldStack;
 
-        protected virtual Stack<string> EndFieldStack => _endFieldStack ?? (_endFieldStack = new Stack<string>());
+        protected virtual ConcurrentStack<string> EndFieldStack => _endFieldStack ?? (_endFieldStack = new ConcurrentStack<string>());
 
         public void PushEndFieldStack(string lastPart)
         {
@@ -16,7 +15,11 @@ namespace Foundation.ScribanExtensions.Cache
 
         public string PopEndFieldStack()
         {
-            return EndFieldStack.Pop();
+            if (EndFieldStack.TryPop(out string result))
+            {
+                return result;
+            }
+            return string.Empty;
         }
     }
 }

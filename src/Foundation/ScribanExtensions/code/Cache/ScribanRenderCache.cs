@@ -15,7 +15,11 @@ namespace Foundation.ScribanExtensions.Cache
 
         public string PopEndFieldStack()
         {
-            return EndFieldStack.Pop();
+            if (EndFieldStack.TryPop(out string result))
+            {
+                return result;
+            }
+            return string.Empty;
         }
     }
 }
